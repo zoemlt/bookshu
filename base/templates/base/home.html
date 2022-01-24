@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>Home Template</h1>
+<div>
+    <div>
+        {% for space in spaces %}
+        <div>
+            <h5>{{space.id}} -- <a href="{% url 'space' space.id %}">{{space.name}}</a></h5>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
